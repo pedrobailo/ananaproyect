@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAR ANANA</title>
+    <link rel="shortcut icon" href="../img/ananaicon.png" type="image/x-icon">
+    <title>Anana RestoBar</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -14,21 +15,24 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
+        <nav class="main-nav">
+            <div id="menu-hamb" class="menu-hamb">
+                <img src="./img/icons8-menú-xbox-64.png" alt="icono-menu-hamburguesa">
+            </div>
+            <ul id="main-menu" class="main-menu">
+                <li class="main-menu__item">
                     <a href="../index.html">INICIO</a>
                 </li>
-                <li>
+                <li class="main-menu__item">
                     <a href="menu.html">MENU</a>
                 </li>
-                <li>
+                <li class="main-menu__item">
                     <a href="contacto.html">CONTACTO</a>
                 </li>
-                <li>
+                <li class="main-menu__item">
                     <a href="nosotros.html">NOSOTROS</a>
                 </li>
-                <li>
+                <li class="main-menu__item">
                     <a href="historia.html">HISTORIA</a>
                 </li>
             </ul>
@@ -36,6 +40,34 @@
     </header>
 
     <h2>Quienes somos?</h2>
+    <p></p>
+
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Ananá resto, bar & music🍍, Bartolomé Mitre 753, B6700 Luján, Provincia de Buenos Aires&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+        </div>
+        <style>
+        .mapouter{
+            position:relative;
+            text-align:center;
+            height:400px;
+            padding: 50px;
+            margin-top: 15px;
+        }
+
+        .gmap_canvas{
+            overflow:hidden;
+            background:none!important;
+            width:100%;
+            height:400px;
+        }
+        .gmap_iframe{
+            height:400px!important;
+        }
+
+        </style>
+    </div>
 
     <footer>
         

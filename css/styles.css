@@ -39,6 +39,10 @@ header{
     padding: 1em;
     }
 
+.main-nav{
+    display: flex;
+    justify-content: center;
+}
 
 a{
     text-decoration: none;
@@ -63,6 +67,13 @@ img.grande{
     width: 250px;
     height: 250px;
     padding: 15px;
+    border-radius: 30px;
+}
+
+img.grande:hover{
+    transform: scale(1.15);
+    transition-property: all;
+    transition-duration: 0.35s;
 }
 
 p{
@@ -99,6 +110,8 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
+/* grids */
 
 header{
     grid-area: header;
@@ -159,4 +172,28 @@ footer{
     footer{
         margin-top: 125px;
     }
+}
+
+/* Formulario de contacto */
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+.header {
+    color:aliceblue;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+/* Ubicacion Google Maps */
+.mapouter{
+    display: flex;
+    padding: 50px;
 }
