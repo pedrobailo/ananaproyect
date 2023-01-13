@@ -10,38 +10,30 @@ body{
     min-height: 100vh;
 }
 
-header{
-    background-color: rgb(143 0 28);
+.anana-title{
+    background-color: #640b0b;
+    color: rgb(199, 168, 45);
+    padding: 15px;
+    margin: 0px;
     text-align: center;
-    padding: 15px;
 }
 
-.menu-hamb{
-    position: absolute;
-    top: 5.4rem;
-    right: 1rem;
-    cursor: pointer;
-    filter: invert(1);
+/* Estilos Nav Bar */
+.navbar {
+    --bs-navbar-padding-x: none;
+    --bs-navbar-padding-y: none;
 }
-
-.main-menu{
-    list-style-type: none;
-    font: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
+nav{
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
-
-    .main-menu__item{
-    padding: 1em;
-    }
-
-.main-nav{
-    display: flex;
-    justify-content: center;
+.boton__nav{
+    background-color: #ffa4a4;
+}
+.boton__color {
+    background-color:white;
+    padding: 5px;
+    margin: 15px;
 }
 
 a{
@@ -49,18 +41,19 @@ a{
     color: aliceblue;
 }
 
-.main-menu__item:hover{
-    transform: scale(1.15);
-    transition-property: all;
-    transition-duration: 0.35s;
+.titulosindex{
+background-image: url(../img/ananalogohoja.png);
+background-position: center;
+background-repeat: no-repeat;
 }
 
-.anana-title{
-    background-color: #640b0b;
-    color: rgb(199, 168, 45);
-    padding: 15px;
-    margin: 0px;
-    text-align: center;
+
+
+/* IMG */
+.imagenesportada{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
 }
 
 img.grande{
@@ -76,11 +69,14 @@ img.grande:hover{
     transition-duration: 0.35s;
 }
 
+
+
+/* Textos */
 p{
     padding: 30px;
 }
 
-h2, h3{ 
+h2, h3, h4{ 
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -88,7 +84,9 @@ h2, h3{
     color: aliceblue;
 }
 
-.imagenesindex{
+/* Menu Section */
+
+.imagenesmenu{
     padding: 30px;
     margin: 2px;
     align-items: center;
@@ -96,16 +94,27 @@ h2, h3{
     flex-direction: column;
 }
 
-.iconosdos{
+.linkcarta{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 10px;
+    color: aliceblue;
 }
+
+
+/* Footer */
 
 footer{
     background-color: #ffa4a4;
     margin-top: 25px;
     padding: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.iconosdos{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,8 +130,8 @@ nav{
     grid-area: nav;
 }
 
-.imagenesindex{
-    grid-area: imgindex;
+.imagenesmenu{
+    grid-area: imgmenu;
 }
 
 footer{
@@ -130,7 +139,7 @@ footer{
 }
 
 @media (min-width: 500px){
-    .imagenesindex{
+    .imagenesmenu{
         padding: 0%;
         display: grid;
         gap: 0px;
@@ -140,13 +149,13 @@ footer{
         grid-template-areas:
         "header     header"
         "nav        nav"
-        "imgindex   imgindex"
+        "imgmenu   imgmenu"
         "footer     footer";
     }
 }
 
 @media (min-width:768px){
-    .imagenesindex{
+    .imagenesmenu{
         margin-top: 25px;
         padding: 0%;
         display: grid;
@@ -157,20 +166,35 @@ footer{
         grid-template-areas:
         "header     header      header"
         "nav        nav         nav"
-        "imgindex   imgindex    imgindex"
+        "imgmenu   imgmenu     imgmenu"
         "footer     footer      footer";
-    }
-
-    .main-menu{
-        flex-direction: row;
-    }
-
-    .menu-hamb{
-        display: none;
     }
 
     footer{
         margin-top: 125px;
+    }
+}
+
+@media (min-width:1024px){
+    .imagenesmenu{
+        margin-top: 25px;
+        padding: 0%;
+        display: grid;
+        gap: 0px;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-areas:
+        "header     header      header     header"
+        "nav        nav         nav        nav"
+        "imgmenu   imgmenu     imgmenu     imgmenu"
+        "footer     footer      footer     footer";
+    }
+    img.grande{
+        width: 290px;
+        height: 290px;
+        padding: 15px;
+        border-radius: 30px;
     }
 }
 
